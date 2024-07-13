@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Notes.ViewModels"
+             x:Class="Notes.Views.NotePage"
+             Title="Note"
+             BackgroundColor="#f0f0f5">
+    <ContentPage.BindingContext>
+        <viewModels:NoteViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <Editor x:Name="TextEditor"
+                Placeholder="Enter your note"
+                Text="{Binding Text}"
+                HeightRequest="200"
+                BackgroundColor="White"
+                TextColor="#333333"
+                FontSize="18"
+                PlaceholderColor="Silver"
+                Margin="0,10,0,0"
+                VerticalOptions="StartAndExpand"
+                />
+
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+            <Button Text="Save"
+                    Command="{Binding SaveCommand}"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    />
+
+            <Button Grid.Column="1"
+                    Text="Delete"
+                    Command="{Binding DeleteCommand}"
+                    BackgroundColor="#f44336"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

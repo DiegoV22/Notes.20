@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Notes.ViewModels"
+             x:Class="Notes.Views.AboutPage">
+    <ContentPage.BindingContext>
+        <viewModels:AboutViewModel />
+    </ContentPage.BindingContext>
+    <VerticalStackLayout Spacing="20" Padding="20" BackgroundColor="#f0f0f5">
+        <HorizontalStackLayout Spacing="20">
+            <Image Source="bicholover.jpg"
+                   SemanticProperties.Description="Cristiano Ronaldo"
+                   HeightRequest="150" 
+                   Aspect="AspectFill"
+                   VerticalOptions="Center"/>
+            <VerticalStackLayout VerticalOptions="Center">
+                <Label FontSize="26" FontAttributes="Bold" Text="Cristiano Ronaldo" TextColor="#3b3b3b"/>
+                <Label FontSize="22" Text="El mejor del mundo" TextColor="#3b3b3b"/>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+
+        <Frame BackgroundColor="#ffffff" CornerRadius="10" Padding="15" HasShadow="True">
+            <Label FontSize="18" TextColor="#3b3b3b" Text="Aquí hay algunas razones por las que Cristiano Ronaldo es mejor que Messi:
+1. Versatilidad: Cristiano ha demostrado su capacidad en múltiples ligas y equipos, ganando títulos importantes en Inglaterra, España e Italia.
+2. Física: Su físico y atletismo excepcionales le permiten sobresalir en situaciones que requieren fuerza, velocidad y resistencia.
+3. Goles: Ha marcado más de 700 goles en su carrera profesional, superando numerosos récords de goles en la UEFA Champions League y otras competiciones.
+4. Liderazgo: Cristiano ha demostrado ser un líder tanto en sus clubes como en la selección nacional de Portugal, llevándolos a la victoria en la Eurocopa 2016 y la Liga de Naciones de la UEFA.
+5. Consistencia: Ha mantenido un nivel de juego excepcional durante más de 15 años, algo que pocos jugadores han logrado."/>
+        </Frame>
+
+        <Label FontSize="24" FontAttributes="Bold" Text="Cristiano, el GOAT. Siiiiiuuuuu!" TextColor="#3b3b3b" HorizontalOptions="Center" VerticalOptions="End" Margin="20"/>
+    </VerticalStackLayout>
+</ContentPage>
